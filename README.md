@@ -1,8 +1,7 @@
 # Sign In With Apple on React Native with ClojureScript
 
 `rn-cljs-apple-authentication` is a library that adapts the React Native
-bindings to [Sign In With Apple](https://developer.apple.com/sign-in-with-apple/
-https://developer.apple.com/sign-in-with-apple/)
+bindings to [Sign In With Apple](https://developer.apple.com/sign-in-with-apple/)
 provided by [`@invertase/react-native-apple-authentication`](https://github.com/invertase/react-native-apple-authentication)
 to a more fluent Clojure idiom.
 
