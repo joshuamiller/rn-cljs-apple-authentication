@@ -1,0 +1,5 @@
+{:deps {org.clojure/clojurescript {:git/url "https://github.com/clojure/clojurescript.git"
+                                   :sha "538dbe8133895c56f7da84609bcd696c85aa925c"}
+        org.clojure/core.async {:mvn/version "1.1.587"}
+        reagent {:mvn/version "0.10.0"
+                 :exclusions [cljsjs/react cljsjs/react-dom]}}}
