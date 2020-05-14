@@ -86,7 +86,7 @@
   (throw-if-unsupported)
 
   (let [subscription (.addListener emitter "RNAppleAuth.onCredentialRevoked" listener)]
-    (.remove subscription)))
+    (.-remove subscription)))
 
 (defn basic-login
   []
