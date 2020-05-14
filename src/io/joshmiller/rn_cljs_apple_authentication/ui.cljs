@@ -14,4 +14,15 @@
    :continue "Continue"
    :sign-up "SignUp"})
 
-(def sign-in-with-apple-button (r/adapt-react-class auth/AppleButton))
+(def apple-button (r/adapt-react-class auth/AppleButton))
+
+(defn sign-in-with-apple-button
+  [opts]
+  (let [{:keys [button-type button-style]} opts
+        button-type*  (get button-types (or button-type :default))
+        button-style* (get button-styles (or button-style :default))
+        opts* (assoc (or opts {})
+                     :button-type button-type*
+                     :button-style button-style*)]
+    (fn []
+      [apple-button opts*])))
