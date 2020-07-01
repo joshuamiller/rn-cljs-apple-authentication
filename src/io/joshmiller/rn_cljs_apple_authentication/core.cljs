@@ -95,14 +95,8 @@
       (let [request-opts {::requested-operation :login
                           ::requested-scopes [:email :full-name]}
             response (js->clj (<p! (perform-request request-opts))
-                              :keywordize-keys true)
-            user (.-user response)
-            cred-state (<p! (get-credential-state-for-user user))]
-        (println "User" user)
-        (println (get (map-invert credential-state) cred-state))
-        (if (= cred-state (:authorized credential-state))
-          user
-          {:error (get (map-invert credential-state) cred-state)}))
+                              :keywordize-keys true)]
+        response)
       (catch js/Error err
         (println err)
         (println (ex-cause err))))))
